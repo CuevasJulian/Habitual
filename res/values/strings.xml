@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Habitual</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="title_activity_confirmacion_manual">ConfirmacionManual</string>
+    <string name="title_activity_modo_manual">ModoManual</string>
+    <string name="title_activity_configuraciones">Configuraciones</string>
+
+</resources>

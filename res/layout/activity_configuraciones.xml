@@ -1,0 +1,171 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"> 
+    tools:context=".Configuraciones"
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <ImageView
+        android:id="@+id/topConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/top" />
+
+    <ImageView
+        android:id="@+id/fondotempConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/topConfig"
+        android:layout_below="@+id/topConfig"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/fondotemp2" />
+
+    <TextView
+        android:id="@+id/temperaturaConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondotempConfig"
+        android:layout_alignBottom="@+id/fondotempConfig"
+        android:layout_marginLeft="74dp"
+        android:layout_marginBottom="5dp"
+        android:text="20"
+        android:textSize="60dp"
+        android:textColor="#95AB37"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/fondoIntensidadConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondotempConfig"
+        android:layout_below="@+id/fondotempConfig"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/fondointensidad" />
+
+    <SeekBar
+        android:id="@+id/datoIntensidad"
+        android:layout_width="145dp"
+        android:layout_height="17dp"
+        android:layout_alignLeft="@+id/fondotempConfig"
+        android:layout_below="@+id/fondotempConfig"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="23dp"
+        android:max="100"
+        android:progress="30"
+        android:progressDrawable="@drawable/seekerhabitual"
+        android:thumb="@drawable/thumbhabitual2" />
+
+    <ImageView
+        android:id="@+id/fondoHumedadConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondoIntensidadConfig"
+        android:layout_below="@+id/fondoIntensidadConfig"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/fondohumedad" />
+    
+    <SeekBar
+        android:id="@+id/datoHumedad"
+        android:layout_width="145dp"
+        android:layout_height="17dp"
+        android:layout_below="@+id/fondoIntensidadConfig"
+        android:layout_alignLeft="@+id/fondoIntensidadConfig"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="40dp"
+        android:max="100"
+        android:progressDrawable="@drawable/seekerhabitual"
+        android:thumb="@drawable/thumbhabitual2"
+        android:progress="30" />
+
+    <ImageView
+        android:id="@+id/textAlerta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondoHumedadConfig"
+        android:layout_below="@+id/fondoHumedadConfig"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/alerta" />
+
+    <ImageButton
+        android:id="@+id/botonGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textAlerta"
+        android:layout_below="@+id/textAlerta"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="26dp"
+        android:onClick="guardarDatos"
+        android:src="@drawable/guardar" />
+
+    <ImageView
+        android:id="@+id/botConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/topConfig"
+        android:layout_below="@+id/botonGuardar"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="0dp"
+        
+        
+        android:src="@drawable/bot2" />
+
+    <TextView
+        android:id="@+id/configPorcentLuz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondotempConfig"
+        android:layout_below="@+id/fondotempConfig"
+        android:layout_marginLeft="216dp"
+        android:textSize="18dp"
+        android:layout_marginTop="20dp"
+        android:text="20" />
+
+    <TextView
+        android:id="@+id/configPorcentHumedad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondoIntensidadConfig"
+        android:layout_below="@+id/fondoIntensidadConfig"
+        android:layout_marginLeft="216dp"
+        android:textSize="18dp"
+        android:layout_marginTop="37dp"
+        android:text="20" />
+
+    <Button
+        android:id="@+id/tempUp"
+        android:layout_width="25dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/fondotempConfig"
+        android:layout_alignLeft="@+id/fondotempConfig"
+        android:layout_marginLeft="224dp"
+        android:layout_marginTop="0dp"
+        android:onClick="subeTemp"
+        android:background="@android:color/transparent" />
+    <Button
+        android:id="@+id/tempDown"
+        android:layout_width="25dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/fondotempConfig"
+        android:layout_alignLeft="@+id/fondotempConfig"
+        android:layout_marginLeft="224dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:onClick="bajaTemp" />
+
+</RelativeLayout>
+</ScrollView>

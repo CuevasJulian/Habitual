@@ -1,0 +1,166 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"> 
+    tools:context=".ModoManual"
+    
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+     >
+
+    <ImageView
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/top" />
+
+    
+
+    <ImageView
+        android:id="@+id/fondotemperatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/top"
+        android:layout_below="@+id/top"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="matrix"
+        android:src="@drawable/fondotemp" />
+
+    <TextView
+        android:id="@+id/tempManual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fondotemperatura"
+        android:layout_alignLeft="@+id/fondotemperatura"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="73dp"
+        android:text="20"
+        android:textSize="60dp"
+        android:textColor="#95AB37"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/fondointensidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondotemperatura"
+        android:layout_below="@+id/fondotemperatura"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/fondointensidad" />
+    
+    <ProgressBar
+        android:id="@+id/IntensidadLuzManual"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondotemperatura"
+        android:layout_below="@+id/fondotemperatura"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="27dp"
+        android:minHeight="14dp"
+        android:minWidth="145dp"
+        android:progress="50"
+        android:progressDrawable="@drawable/barraprogresshabitual" />
+
+    <ImageView
+        android:id="@+id/fondohumedad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondointensidad"
+        android:layout_below="@+id/fondointensidad"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/fondohumedad" />
+    
+    <ProgressBar
+        android:id="@+id/nivelHumedadManual"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondointensidad"
+        android:layout_below="@+id/fondointensidad"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="23dp"
+        android:minHeight="14dp"
+        android:minWidth="145dp"
+        android:progress="50"
+        android:progressDrawable="@drawable/barraprogresshabitual" />
+
+    <ImageButton
+        android:id="@+id/desactivarManual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondohumedad"
+        android:layout_below="@+id/fondohumedad"
+        android:layout_marginLeft="-13dp"
+        android:layout_marginTop="23dp"
+        android:onClick="onClicK_AlertBox"
+        android:src="@drawable/estadoactivado" />
+    
+    <ImageButton
+        android:id="@+id/activarRegar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/desactivarManual"
+        android:layout_below="@+id/desactivarManual"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="15dp"
+        android:onClick="enviarRegar"
+        android:src="@drawable/regar" />
+    
+    <ImageButton
+        android:id="@+id/desactivarRegar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/activarRegar"
+        android:layout_below="@+id/desactivarManual"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="15dp"
+        android:onClick="enviarNoRegar"
+        android:src="@drawable/noregar" />
+    
+    
+    <ImageView
+        android:id="@+id/bot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/top"
+        android:layout_below="@+id/activarRegar"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/bot2" />
+
+    <TextView
+        android:id="@+id/porcentajeLuzManual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fondotemperatura"
+        android:layout_below="@+id/fondotemperatura"
+        android:layout_marginLeft="216dp"
+        android:textSize="18dp"
+        android:layout_marginTop="22dp"
+        android:text="20" />
+    
+    <TextView
+        android:id="@+id/porcentajeHumedadManual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	android:layout_alignLeft="@+id/fondointensidad"
+        android:layout_below="@+id/fondointensidad"
+        android:layout_marginLeft="216dp"
+        android:textSize="18dp"
+        android:layout_marginTop="18dp"
+        android:text="20" />
+
+</RelativeLayout>
+</ScrollView>
